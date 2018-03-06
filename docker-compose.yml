@@ -1,0 +1,24 @@
+version: '3'
+services:
+  xt42:
+    build:
+      context: Dockerfiles/xt42
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql
+    expose:
+      - "80"
+    ports:
+      - "8042:80"
+    env_file:
+      - .env
+      - $XT42_LOCAL_PATH/.env
+    volumes:
+      - $XT42_LOCAL_PATH:/var/www/html
+
+  mysql:
+      build:
+        context: Dockerfiles/mysql
+        dockerfile: Dockerfile
+      expose:
+        - "3306"
