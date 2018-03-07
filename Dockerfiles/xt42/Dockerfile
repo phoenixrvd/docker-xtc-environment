@@ -15,9 +15,7 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
     && docker-php-ext-install -j$(nproc) gd pdo iconv mcrypt mysqli mysql soap
 
 # Install ioncube
-ADD https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz /usr/local/
-RUN tar -zxvf /usr/local/ioncube_loaders_lin_x86-64.tar.gz -C /usr/local/ \
-    && rm /usr/local/ioncube_loaders_lin_x86-64.tar.gz
+COPY ioncube_loader_lin_5.6.so /usr/local/ioncube/ioncube_loader_lin_5.6.so
 
 # Configure Apache
 RUN echo ServerName localhost >> /etc/apache2/conf-enabled/docker-php.conf
