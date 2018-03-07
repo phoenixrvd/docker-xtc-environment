@@ -38,3 +38,4 @@ services:
         dockerfile: Dockerfile
       expose:
         - "3306"
+      hostname: mysql
