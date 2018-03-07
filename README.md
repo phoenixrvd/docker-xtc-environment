@@ -13,7 +13,9 @@ Komplette PHP- und Datenbank-Umgebung um die XT-Commerce - Shops auf 'localhost'
   - [XT:Commerce 4.2](#xtcommerce-42)
   - [XT:Commerce 5.0](#xtcommerce-50)
   - [Shop-Environment](#shop-environment)
-  - [Live-Datenbank automatisch einspielen](#live-datenbank-automatisch-einspielen)
+- [Datenbanken](#datenbanken)
+  - [Live-Daten einspielen](#live-daten-einspielen)
+  - [Devel-Daten sichern](#devel-daten-sichern)
 - [Contributing](#contributing)
 - [Copyright and license](#copyright-and-license)
 
@@ -83,10 +85,17 @@ Live-Server-Einstellungen übereinstimmen.
 
 Anmerkung: Nutzt man die Live-Daten, wird `xt-init` - Script automatisch die Datenbank und Benutzer anlegen.
 
-### Live-Datenbank automatisch einspielen
+## Datenbanken
+
+### Live-Daten einspielen
 
 * SQL-Dump unter ```<my_shop_path>/dump.sql``` ablegen
 * ```bash docker exec -it  xtc_xt50_1 xt-init``` ausführen
+
+### Devel-Daten sichern
+
+* ```bash docker exec -it  xtc_xt50_1 xt-db-dump``` ausführen
+* somit wird eine SQL unter ```<my_shop_path>/dump.sql``` abgelegt
 
 ## Contributing
 
