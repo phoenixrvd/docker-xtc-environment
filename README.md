@@ -49,7 +49,7 @@ eigenem Rechner installieren. (**Einmalig**)
 cd /<my>/shop/path
 git clone https://github.com/phoenixrvd/docker-xtc-environment
 cd docker-xtc-environment
-docker-compose up --build xtc42
+docker-compose up --build xt42
 ```
 * Die Umgebung vorbereiten. (**Einmalig**) Somit wird die Datenbank eingerichtet, Schreibrechte gesetzt usw.
 ```bash
@@ -65,7 +65,7 @@ docker exec -it  xtc_xt42_1 xt-init
 cd /<my>/shop/path
 git clone https://github.com/phoenixrvd/docker-xtc-environment
 cd docker-xtc-environment
-docker-compose up --build xtc50
+docker-compose up --build xt50
 ```
 * Die Umgebung vorbereiten. (**einmalig**) Somit wird die Datenbank eingerichtet, Schreibrechte gesetzt usw.
 ```bash
