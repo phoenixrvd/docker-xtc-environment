@@ -20,6 +20,7 @@ COPY ioncube_loader_lin_5.6.so /usr/local/ioncube/ioncube_loader_lin_5.6.so
 # Configure Apache
 RUN echo ServerName localhost >> /etc/apache2/conf-enabled/docker-php.conf
 RUN a2enmod rewrite
+RUN a2enmod headers
 
 # Install PHP-Settings
 COPY php.ini /usr/local/etc/php/php.ini
