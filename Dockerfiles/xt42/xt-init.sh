@@ -49,3 +49,6 @@ if [ -f ${DUMP_PATH} ]; then
     echo "UPDATE xt_stores SET shop_domain = 'localhost:8042', shop_ssl_domain = 'localhost:8042', shop_http = 'http://localhost:8042', shop_https = 'https://localhost:8042', shop_ssl = 'no_ssl', shop_status = 1, admin_ssl = 0 WHERE shop_id = 1;" >> ${SQL_FILE_NAME};
     mysql -u${MYSQL_USER} -p${MYSQL_PASSWORD} -h${MYSQL_SERVER_IP} ${MYSQL_DATABASE} < ${SQL_FILE_NAME};
 fi
+
+# Delete Caches
+rm -fr ${WEB_ROOT}/cache/* ${WEB_ROOT}/templates_c/* ${WEB_ROOT}/plugin_cache/phpFastCache/cache.storage.*./*
