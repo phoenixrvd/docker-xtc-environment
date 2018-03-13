@@ -57,7 +57,7 @@ docker-compose up --build xt42
 ```bash
 docker exec -it  xtc_xt42_1 xt-init
 ```
-* Den Shop läuft nun unter [localhost:8042](http://localhost:8042)
+* Der Shop läuft nun unter [localhost:8042](http://localhost:8042)
 
 ### XT:Commerce 5.0
 
@@ -73,7 +73,7 @@ docker-compose up --build xt50
 ```bash
 docker exec -it  xtc_xt50_1 xt-init
 ```
-* Den Shop läuft nun unter [localhost:8050](http://localhost:8050)
+* Der Shop läuft nun unter [localhost:8050](http://localhost:8050)
 
 ### Shop-Environment
 
