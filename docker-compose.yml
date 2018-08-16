@@ -36,6 +36,9 @@ services:
       build:
         context: Dockerfiles/mysql
         dockerfile: Dockerfile
+      env_file:
+        - .env
+        - $XT_LOCAL_PATH/.env
       expose:
         - "3306"
       hostname: mysql
